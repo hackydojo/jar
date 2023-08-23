@@ -1,0 +1,13 @@
+site_name: Jungle Adventure Research
+copyright: Copyright &copy; 2023 - Jungle Adventure Research
+extra:
+  generator: false
+theme:
+  name: material
+  palette:
+    primary: amber
+    accent: deep orange
+  font:
+    text: IBM Plex Sans
+    code: IBM Plex Mono
+

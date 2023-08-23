@@ -1,0 +1,26 @@
+language: python
+python: "3.9"
+os: linux
+dist: focal
+
+before_install:
+  - easy_install distribute
+  - pip install poetry
+
+install:
+  - poetry install
+
+script:
+  - poetry shell
+  - mkdocs build
+
+deploy:
+  strategy: git
+  provider: pages
+  local_dir: site
+  keep_history: true
+  cleanup: false
+  token: $GH_TOKEN
+  edge: true
+  on:
+    branch: main
